@@ -16,7 +16,7 @@ const postRoute = require("./routes/posts");
 app.use('/api/users/', userRoute) 
 app.use('/api/posts/', postRoute) 
 
-mongoose.connect(process.env.DB_connection)
+mongoose.connect('mongodb+srv://admin:admin@cluster0.9nnusrp.mongodb.net/?retryWrites=true&w=majority')
   .then(() => console.log('Connected to MongoDB!'))
   .catch(err => console.error(err));
 
